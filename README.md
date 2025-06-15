@@ -26,13 +26,13 @@ pip install torch torchvision pillow
 
 ### Entrenamiento del modelo
 ```python
-# train_fashion_cnn.py
+# fashionista.ipynb
 # (incluye entrenamiento, validación, métricas y guardado del modelo CNN)
 ```
 
 ### Código cliente (PC)
 ```python
-# client_predictor.py
+# client.ipynb
 # - Espera imagen vía socket
 # - Procesa con CNN entrenado
 # - Devuelve predicción al NAO
@@ -40,7 +40,7 @@ pip install torch torchvision pillow
 
 ### Código servidor (NAO)
 ```python
-# nao_server.py
+# server.py
 # - Captura imagen
 # - Envía por socket TCP
 # - Recibe predicción
@@ -48,14 +48,14 @@ pip install torch torchvision pillow
 ```
 
 ### Cómo ejecutar
-1. Asegúrate de haber entrenado y guardado el modelo como `fashionista.pth`.
+1. Asegúrate de haber guardado el modelo `fashionista.pth`.
 2. Ejecuta en la PC:
 ```bash
-python3 client_predictor.py
+py client.py
 ```
 3. Ejecuta en el NAO (vía SSH o desde su entorno con Python 2.7):
 ```bash
-python2.7 nao_server.py
+python2.7 server.py
 ```
 
 ## 4. Ejemplo de resultado
